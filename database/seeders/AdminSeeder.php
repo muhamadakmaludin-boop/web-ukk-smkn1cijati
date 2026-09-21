@@ -13,7 +13,7 @@ class AdminSeeder extends Seeder
         User::create([
             'name' => 'Admin SMKN 1 Cijati',
             'email' => 'akmal@smkn1cijati.com',
-            'password' => Hash::make('akmal2009'),
+               'password' => Hash::make(env('ADMIN_PASSWORD', 'ganti-password-ini')),
         ]);
     }
 }

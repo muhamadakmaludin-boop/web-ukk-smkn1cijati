@@ -1,0 +1,228 @@
+:root {
+    --profil-primary: #1e5f8c;
+    --profil-primary-dark: #14405f;
+    --profil-accent: #f2a71b;
+    --profil-bg-soft: #f5f8fb;
+    --profil-text: #263238;
+    --profil-text-muted: #5f6b73;
+    --profil-border: #e0e6ea;
+    --profil-radius: 14px;
+    --profil-shadow: 0 10px 30px rgba(20, 64, 95, 0.08);
+}
+
+/* ---------- HERO PROFIL ---------- */
+.profile-header {
+    background: linear-gradient(135deg, var(--profil-primary) 0%, var(--profil-primary-dark) 100%);
+    color: #fff;
+    padding: 90px 0 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-header .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.profile-header h1 {
+    color: #fff !important;
+    font-size: 2.4rem;
+    margin: 0 0 14px;
+    font-weight: 700;
+}
+
+.profile-header .section-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff !important;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+
+.profile-intro {
+    max-width: 640px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* ---------- SECTION UMUM ---------- */
+.section {
+    padding: 60px 0;
+}
+
+.section-soft {
+    background: var(--profil-bg-soft);
+}
+
+.section .section-tag {
+    display: inline-block;
+    color: var(--profil-primary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.section h2 {
+    font-size: 1.7rem;
+    color: var(--profil-text);
+    margin: 0 0 20px;
+}
+
+.profile-desc {
+    max-width: 780px;
+    color: var(--profil-text-muted);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* ---------- TABEL DATA RESMI ---------- */
+.table-wrap {
+    overflow-x: auto;
+    border-radius: var(--profil-radius);
+    box-shadow: var(--profil-shadow);
+    background: #fff;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+}
+
+.profile-table tr {
+    border-bottom: 1px solid var(--profil-border);
+    transition: background 0.2s ease;
+}
+
+.profile-table tr:last-child {
+    border-bottom: none;
+}
+
+.profile-table tr:hover {
+    background: var(--profil-bg-soft);
+}
+
+.profile-table th,
+.profile-table td {
+    padding: 14px 22px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.profile-table th {
+    width: 220px;
+    color: var(--profil-primary-dark);
+    font-weight: 600;
+    background: #fafcfe;
+}
+
+.profile-table td {
+    color: var(--profil-text);
+}
+
+.profile-table td a {
+    color: var(--profil-primary);
+    text-decoration: none;
+}
+
+.profile-table td a:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.badge-a {
+    background: rgba(46, 160, 92, 0.12);
+    color: #2ea05c;
+}
+
+.table-note {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: var(--profil-text-muted);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* ---------- VISI & MISI ---------- */
+.vm-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.vm-card {
+    background: #fff;
+    border: 1px solid var(--profil-border);
+    border-radius: var(--profil-radius);
+    padding: 32px 28px;
+    box-shadow: var(--profil-shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vm-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(20, 64, 95, 0.12);
+}
+
+.vm-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.vm-card h3 {
+    color: var(--profil-primary-dark);
+    font-size: 1.25rem;
+    margin: 0 0 14px;
+}
+
+.vm-card p {
+    color: var(--profil-text-muted);
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.vm-card ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--profil-text-muted);
+    line-height: 1.9;
+}
+
+.vm-card ul li::marker {
+    color: var(--profil-accent);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .profile-header {
+        padding: 70px 0 50px;
+    }
+
+    .profile-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .vm-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-table th {
+        width: 160px;
+    }
+}

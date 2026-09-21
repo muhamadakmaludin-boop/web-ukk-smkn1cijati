@@ -1,0 +1,152 @@
+.ekskul-header {
+    padding: 72px 0 48px;
+    text-align: center;
+    background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
+}
+
+.ekskul-header .section-tag {
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.ekskul-header h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 0 0 12px;
+    color: #111827;
+}
+
+.ekskul-intro {
+    max-width: 640px;
+    margin: 0 auto;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+/* ===== Grid kartu ekskul ===== */
+.ekskul-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 32px;
+}
+
+.ekskul-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.ekskul-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+/* Area foto — tinggi tetap supaya semua kartu rata & rapi */
+.ekskul-photo-wrap {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f2b46, #1b4d7e);
+}
+
+.ekskul-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* foto dipotong proporsional, tidak gepeng */
+    object-position: center;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.ekskul-card:hover .ekskul-image {
+    transform: scale(1.07);
+}
+
+/* Logo bulat mengambang di pojok kiri bawah foto (tidak lagi di dalam
+   .ekskul-photo-wrap, supaya tidak ikut terpotong oleh overflow:hidden) */
+.ekskul-logo {
+    position: absolute;
+    top: 158px; /* 190px (tinggi foto) - 32px (setengah tinggi logo) */
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border: 3px solid #ffffff;
+    z-index: 2;
+}
+
+.ekskul-content {
+    padding: 38px 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ekskul-content h3 {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f2b46;
+}
+
+.ekskul-content p {
+    margin: 0 0 6px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #4a4a4a;
+    flex: 1;
+}
+
+.ekskul-info {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.82rem;
+    color: #555;
+}
+
+.ekskul-info span::before {
+    content: "› ";
+    font-weight: 700;
+    color: #1b4d7e;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .ekskul-grid {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 560px) {
+    .ekskul-header {
+        padding: 56px 0 36px;
+    }
+    .ekskul-photo-wrap {
+        height: 160px;
+    }
+    .ekskul-logo {
+        top: 134px; /* 160px (tinggi foto di mobile) - 26px (setengah tinggi logo) */
+        width: 52px;
+        height: 52px;
+    }
+    .ekskul-content {
+        padding: 30px 16px 16px;
+    }
+}

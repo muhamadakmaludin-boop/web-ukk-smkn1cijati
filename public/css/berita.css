@@ -1,0 +1,113 @@
+.berita-header {
+  background: linear-gradient(135deg, #0b3d91, #1565c0);
+  color: #fff;
+  padding: 70px 0 50px;
+  text-align: center;
+}
+
+.berita-header .section-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.berita-header h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.berita-intro {
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* ===== GRID BERITA ===== */
+.berita-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.berita-card {
+  display: flex;
+  gap: 16px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.berita-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.berita-card img {
+  width: 200px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 16px auto 0;
+  border-radius: 8px;
+  background: #e0e0e0;   /* placeholder abu-abu kalau gambar gagal load */
+}
+
+.berita-content {
+  padding: 18px 20px; 
+}
+
+.berita-content small {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.berita-content h3 {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: #0b3d91;
+}
+
+.berita-content p {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.berita-tag {
+  display: inline-block;
+  background: #e3f2fd;
+  color: #1565c0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+/* ===== CATATAN ===== */
+.table-note {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: #777;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .berita-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .berita-header h1 {
+    font-size: 1.5rem;
+  }
+}
